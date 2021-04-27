@@ -1,0 +1,128 @@
+<CodeGenerationInfo>
+  <ToolchainSettings>
+    <option>
+      <name>PE_G_4PEx_ToolChain_CompilerCpp_SearchUserPaths</name>
+      <values lines_count="4">
+        <Line>"${ProjDirPath}/Static_Code/PDD"</Line>
+        <Line>"${ProjDirPath}/Static_Code/IO_Map"</Line>
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+    <option>
+      <name>PE_G_4PEx_ToolChain_Compiler_SearchUserPaths</name>
+      <values lines_count="4">
+        <Line>"${ProjDirPath}/Static_Code/PDD"</Line>
+        <Line>"${ProjDirPath}/Static_Code/IO_Map"</Line>
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+  </ToolchainSettings>
+  <GeneratedFilesList>
+    <GeneratedByPE>
+      <File Name="Static_Code/PDD/LPTMR_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866717" FileType="1048576" />
+      <File Name="Documentation/doxygen/TimerIntLdd1_component.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765791" FileType="45637" CompNumb="14" />
+      <File Name="Documentation/doxygen/pex.css" FileDate="2021-04-23, 23:17:46" FileAge="1619237866602" FileType="16384" CompNumb="2" />
+      <File Name="Generated_Code/AS1.h" FileDate="2021-04-23, 23:23:33" FileAge="1619238213640" FileType="45637" CompNumb="11" />
+      <File Name="Generated_Code/AS1.c" FileDate="2021-04-23, 23:23:33" FileAge="1619238213638" FileType="45637" CompNumb="11" />
+      <File Name="Documentation/LineCamera2.txt" FileDate="2021-04-27, 10:02:46" FileAge="1619535766107" FileType="3072" />
+      <File Name="Static_Code/PDD/I2C_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866715" FileType="1048576" />
+      <File Name="Static_Code/PDD/PIT_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866726" FileType="1048576" />
+      <File Name="Generated_Code/PE_Types.h" FileDate="2021-04-27, 10:02:45" FileAge="1619535765837" FileType="45637" />
+      <File Name="Static_Code/PDD/RTC_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866732" FileType="1048576" />
+      <File Name="Static_Code/PDD/MCM_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866723" FileType="1048576" />
+      <File Name="Static_Code/PDD/MCG_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866721" FileType="1048576" />
+      <File Name="Generated_Code/A0.h" FileDate="2021-04-25, 14:41:16" FileAge="1619379676014" FileType="45637" CompNumb="3" />
+      <File Name="Generated_Code/A0.c" FileDate="2021-04-25, 14:41:16" FileAge="1619379676005" FileType="45637" CompNumb="3" />
+      <File Name="Generated_Code/Motor_Control.h" FileDate="2021-04-27, 10:02:45" FileAge="1619535765581" FileType="45637" CompNumb="30" />
+      <File Name="Static_Code/PDD/GPIO_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866713" FileType="1048576" />
+      <File Name="Generated_Code/Motor_Control.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765579" FileType="45637" CompNumb="30" />
+      <File Name="Static_Code/PDD/SysTick_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866769" FileType="1048576" />
+      <File Name="Documentation/doxygen/TU3_component.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765821" FileType="45637" CompNumb="22" />
+      <File Name="Static_Code/PDD/USB_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866781" FileType="1048576" />
+      <File Name="Generated_Code/PE_Const.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866828" FileType="45637" />
+      <File Name="Documentation/doxygen/TU1_component.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765707" FileType="45637" CompNumb="9" />
+      <File Name="Documentation/doxygen/TU5_component.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765589" FileType="45637" CompNumb="32" />
+      <File Name="Generated_Code/TimerIntLdd2.h" FileDate="2021-04-26, 19:30:50" FileAge="1619483450982" FileType="45637" CompNumb="21" />
+      <File Name="Static_Code/PDD/OSC_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866725" FileType="1048576" />
+      <File Name="Documentation/doxygen/RoutingReport_component.txt" FileDate="2021-04-23, 23:17:46" FileAge="1619237866817" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/TimerIntLdd2.c" FileDate="2021-04-26, 19:30:50" FileAge="1619483450981" FileType="45637" CompNumb="21" />
+      <File Name="Generated_Code/TimerIntLdd1.h" FileDate="2021-04-27, 10:02:45" FileAge="1619535765781" FileType="45637" CompNumb="14" />
+      <File Name="Static_Code/PDD/PDD_Types.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866693" FileType="1048576" CompNumb="2" />
+      <File Name="Static_Code/PDD/DMAMUX_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866704" FileType="1048576" />
+      <File Name="Generated_Code/TU5.h" FileDate="2021-04-27, 10:02:45" FileAge="1619535765593" FileType="45637" CompNumb="32" />
+      <File Name="Generated_Code/TimerIntLdd1.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765785" FileType="45637" CompNumb="14" />
+      <File Name="Documentation/doxygen/pex.doxyfile" FileDate="2021-04-23, 23:17:46" FileAge="1619237866815" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/TU5.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765591" FileType="45637" CompNumb="32" />
+      <File Name="Documentation/doxygen/TimerIntLdd2_component.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765824" FileType="45637" CompNumb="21" />
+      <File Name="Generated_Code/TU4.h" FileDate="2021-04-26, 20:03:25" FileAge="1619485405438" FileType="45637" CompNumb="27" />
+      <File Name="Documentation/doxygen/PwmLdd1_component.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765752" FileType="45637" CompNumb="8" />
+      <File Name="Static_Code/PDD/TPM_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866770" FileType="1048576" />
+      <File Name="Static_Code/PDD/COP_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866700" FileType="1048576" />
+      <File Name="Generated_Code/TU4.c" FileDate="2021-04-26, 20:03:25" FileAge="1619485405436" FileType="45637" CompNumb="27" />
+      <File Name="Project_Settings/Startup_Code/startup.c" FileDate="2021-04-23, 23:17:46" FileAge="1619237866551" FileType="16384" CompNumb="2" />
+      <File Name="Documentation/LineCamera2_SIGNALS.txt" FileDate="2021-04-27, 14:26:28" FileAge="1619551588830" FileType="3072" />
+      <File Name="Generated_Code/TU3.h" FileDate="2021-04-26, 19:30:51" FileAge="1619483451017" FileType="45637" CompNumb="22" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866823" FileType="45637" CompNumb="2" />
+      <File Name="Sources/main.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765852" FileType="128" />
+      <File Name="Generated_Code/PE_LDD.h" FileDate="2021-04-27, 10:02:45" FileAge="1619535765866" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/TU3.c" FileDate="2021-04-26, 19:30:51" FileAge="1619483451019" FileType="45637" CompNumb="22" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765856" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/TU2.h" FileDate="2021-04-27, 10:02:45" FileAge="1619535765764" FileType="45637" CompNumb="15" />
+      <File Name="Documentation/doxygen/PwmLdd3_component.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765584" FileType="45637" CompNumb="31" />
+      <File Name="Generated_Code/Vectors.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765869" FileType="45637" CompNumb="2" />
+      <File Name="Documentation/doxygen/LineCamera2_project.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765860" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/PE_LDD.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765863" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/TU2.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765769" FileType="45637" CompNumb="15" />
+      <File Name="Generated_Code/TU1.h" FileDate="2021-04-27, 10:02:45" FileAge="1619535765697" FileType="45637" CompNumb="9" />
+      <File Name="Static_Code/PDD/TSI_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866772" FileType="1048576" />
+      <File Name="Documentation/doxygen/ASerialLdd1_component.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765758" FileType="45637" CompNumb="12" />
+      <File Name="Generated_Code/TU1.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765701" FileType="45637" CompNumb="9" />
+      <File Name="Static_Code/PDD/CMP_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866699" FileType="1048576" />
+      <File Name="Documentation/doxygen/SI_component.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765817" FileType="45637" CompNumb="19" />
+      <File Name="Documentation/doxygen/AdcLdd1_component.txt" FileDate="2021-04-25, 14:41:16" FileAge="1619379676038" FileType="45637" CompNumb="4" />
+      <File Name="Static_Code/IO_Map/MKL25Z4.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866689" FileType="1048576" CompNumb="2" />
+      <File Name="Generated_Code/Main_Control.h" FileDate="2021-04-26, 19:30:50" FileAge="1619483450976" FileType="45637" CompNumb="20" />
+      <File Name="Generated_Code/Main_Control.c" FileDate="2021-04-27, 14:26:28" FileAge="1619551588715" FileType="45637" CompNumb="20" />
+      <File Name="Static_Code/PDD/UART0_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866774" FileType="1048576" />
+      <File Name="Generated_Code/CLK.h" FileDate="2021-04-27, 10:02:45" FileAge="1619535765672" FileType="45637" CompNumb="7" />
+      <File Name="ProjectInfo.xml" FileDate="2021-04-27, 10:02:46" FileAge="1619535766103" FileType="45637" />
+      <File Name="Generated_Code/CLK.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765665" FileType="45637" CompNumb="7" />
+      <File Name="Static_Code/PDD/DMA_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866708" FileType="1048576" />
+      <File Name="Static_Code/PDD/SPI_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866767" FileType="1048576" />
+      <File Name="Generated_Code/PE_Error.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866830" FileType="45637" />
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.ld" FileDate="2021-04-23, 23:17:46" FileAge="1619237866790" FileType="8" CompNumb="2" />
+      <File Name="Static_Code/PDD/SIM_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866737" FileType="1048576" />
+      <File Name="Static_Code/PDD/FTFA_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866711" FileType="1048576" />
+      <File Name="Static_Code/PDD/ADC_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866696" FileType="1048576" />
+      <File Name="Static_Code/PDD/DAC_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866702" FileType="1048576" />
+      <File Name="Generated_Code/ASerialLdd1.h" FileDate="2021-04-23, 23:23:33" FileAge="1619238213646" FileType="45637" CompNumb="12" />
+      <File Name="Sources/Events.h" FileDate="2021-04-27, 14:26:28" FileAge="1619551588733" FileType="131328" />
+      <File Name="Generated_Code/ASerialLdd1.c" FileDate="2021-04-23, 23:23:33" FileAge="1619238213644" FileType="45637" CompNumb="12" />
+      <File Name="Documentation/LineCamera2_Settings.xml" FileDate="2021-04-27, 14:26:28" FileAge="1619551588968" FileType="3072" />
+      <File Name="Generated_Code/AdcLdd1.h" FileDate="2021-04-25, 14:41:16" FileAge="1619379676025" FileType="45637" CompNumb="4" />
+      <File Name="Sources/Events.c" FileDate="2021-04-27, 14:26:28" FileAge="1619551588776" FileType="131328" />
+      <File Name="Documentation/doxygen/TU2_component.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765776" FileType="45637" CompNumb="15" />
+      <File Name="Generated_Code/Servo_Control.h" FileDate="2021-04-26, 20:03:25" FileAge="1619485405426" FileType="45637" CompNumb="25" />
+      <File Name="Generated_Code/AdcLdd1.c" FileDate="2021-04-25, 14:41:16" FileAge="1619379676031" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/PwmLdd3.h" FileDate="2021-04-27, 10:02:45" FileAge="1619535765588" FileType="45637" CompNumb="31" />
+      <File Name="Generated_Code/Servo_Control.c" FileDate="2021-04-27, 14:26:28" FileAge="1619551588723" FileType="45637" CompNumb="25" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866826" FileType="45637" />
+      <File Name="Generated_Code/PwmLdd3.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765586" FileType="45637" CompNumb="31" />
+      <File Name="Generated_Code/SI.h" FileDate="2021-04-27, 10:02:45" FileAge="1619535765809" FileType="45637" CompNumb="19" />
+      <File Name="Generated_Code/PwmLdd2.h" FileDate="2021-04-26, 20:03:25" FileAge="1619485405432" FileType="45637" CompNumb="26" />
+      <File Name="Documentation/doxygen/TU4_component.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765828" FileType="45637" CompNumb="27" />
+      <File Name="Generated_Code/SI_CLK.h" FileDate="2021-04-27, 10:02:45" FileAge="1619535765637" FileType="45637" CompNumb="13" />
+      <File Name="Static_Code/PDD/PORT_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866728" FileType="1048576" />
+      <File Name="Generated_Code/SI.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765813" FileType="45637" CompNumb="19" />
+      <File Name="Static_Code/PDD/UART_PDD.h" FileDate="2021-04-23, 23:17:46" FileAge="1619237866777" FileType="1048576" />
+      <File Name="Generated_Code/PwmLdd2.c" FileDate="2021-04-26, 20:03:25" FileAge="1619485405430" FileType="45637" CompNumb="26" />
+      <File Name="Generated_Code/SI_CLK.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765633" FileType="45637" CompNumb="13" />
+      <File Name="Generated_Code/PwmLdd1.h" FileDate="2021-04-27, 10:02:45" FileAge="1619535765745" FileType="45637" CompNumb="8" />
+      <File Name="Documentation/doxygen/PwmLdd2_component.txt" FileDate="2021-04-27, 10:02:45" FileAge="1619535765832" FileType="45637" CompNumb="26" />
+      <File Name="Generated_Code/PwmLdd1.c" FileDate="2021-04-27, 10:02:45" FileAge="1619535765678" FileType="45637" CompNumb="8" />
+    </GeneratedByPE>
+  </GeneratedFilesList>
+  <CodeGenReference>44</CodeGenReference>
+</CodeGenerationInfo>
