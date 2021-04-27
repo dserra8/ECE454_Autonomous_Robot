@@ -1,11 +1,11 @@
 /* ###################################################################
 **     Filename    : Events.c
-**     Project     : LineCamera2
+**     Project     : Velocity_Control
 **     Processor   : MKL25Z128VLK4
 **     Component   : Events
 **     Version     : Driver 01.00
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-23, 22:13, # CodeGen: 0
+**     Date/Time   : 2021-04-19, 21:42, # CodeGen: 0
 **     Abstract    :
 **         This is user's event module.
 **         Put your event handler code here.
@@ -56,148 +56,86 @@ void Cpu_OnNMIINT(void)
 
 /*
 ** ===================================================================
-**     Event       :  AS1_OnError (module Events)
+**     Event       :  Hall_Effect_Sensor_OnCapture (module Events)
 **
-**     Component   :  AS1 [AsynchroSerial]
+**     Component   :  Hall_Effect_Sensor [Capture]
 **     Description :
-**         This event is called when a channel error (not the error
-**         returned by a given method) occurs. The errors can be read
-**         using <GetError> method.
-**         The event is available only when the <Interrupt
-**         service/event> property is enabled.
+**         This event is called on capturing of Timer/Counter actual
+**         value (only when the component is enabled - <Enable> and the
+**         events are enabled - <EnableEvent>.This event is available
+**         only if a <interrupt service/event> is enabled.
 **     Parameters  : None
 **     Returns     : Nothing
 ** ===================================================================
 */
-void AS1_OnError(void)
-{
-  /* Write your code here ... */
-}
+static volatile int Start_Time = 0;
+static volatile int Stop_Time = 0;
+static volatile int count = 0;
+static volatile double speed= 0;
 
-/*
-** ===================================================================
-**     Event       :  AS1_OnRxChar (module Events)
-**
-**     Component   :  AS1 [AsynchroSerial]
-**     Description :
-**         This event is called after a correct character is received.
-**         The event is available only when the <Interrupt
-**         service/event> property is enabled and either the <Receiver>
-**         property is enabled or the <SCI output mode> property (if
-**         supported) is set to Single-wire mode.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-void AS1_OnRxChar(void)
-{
-  /* Write your code here ... */
-}
+//extern static volatile double speed;
+//extern static volatile double avgSpeed;
+//extern static volatile char speedFlag;
 
-/*
-** ===================================================================
-**     Event       :  AS1_OnTxChar (module Events)
-**
-**     Component   :  AS1 [AsynchroSerial]
-**     Description :
-**         This event is called after a character is transmitted.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-void AS1_OnTxChar(void)
+void Hall_Effect_Sensor_OnCapture(void)
 {
-  /* Write your code here ... */
-}
+  double arcLength = 2.0 * (3.14/2.0); //assuming 2 inches wheel radius, inches.
+  if(Start_Time == 0){
+	  Hall_Effect_Sensor_GetCaptureValue(&Start_Time);
 
-/*
-** ===================================================================
-**     Event       :  CLK_OnEnd (module Events)
-**
-**     Component   :  CLK [PWM]
-**     Description :
-**         This event is called when the specified number of cycles has
-**         been generated. (Only when the component is enabled -
-**         <Enable> and the events are enabled - <EnableEvent>). The
-**         event is available only when the <Interrupt service/event>
-**         property is enabled and selected peripheral supports
-**         appropriate interrupt.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-static volatile int counter = 0;
-static volatile int init = 1;
-extern volatile uint16_t cameraOutput[128];
-void CLK_OnEnd(void)
-{
-	char v = 'd';
-	if(init == 1 && (counter == 2 || counter == 3))
-	{
-	  SI_NegVal();
-	  if(counter == 3)
-	  {
-		  init = 0;
-		  counter = 0;
+  }
+  else{
+	  Hall_Effect_Sensor_GetCaptureValue(&Stop_Time);
+
+	  if( Start_Time >= Stop_Time){
+		  Stop_Time += (int)(0.400 / 163840.0);
 	  }
-	}
+
+	  //Calculate the current speed
+	  double Delta_Time = (Stop_Time - Start_Time) / 163840.0; //Time in seconds
+	  speed += arcLength / Delta_Time;
+
+	  Start_Time = Stop_Time;
+
+	  count++; //Increment count
+  }
 
 
-	if(counter < 128 && init == 0){
-		  uint16_t value = 0;
-		  A0_Measure(TRUE);
-		  A0_GetValue16(&value);
-		  cameraOutput[counter] = value/(65535/5);
-		  v = cameraOutput[counter] + 48;
-		  AS1_SendChar(v);
-
-	  }
-	else if(counter >= 128){
-		init = 1;
-		v = 13;
-		AS1_SendChar(v);
-		counter = 0;
-	}
-
-	counter++;
 }
 
 /*
 ** ===================================================================
-**     Event       :  A0_OnEnd (module Events)
+**     Event       :  Main_Control_OnInterrupt (module Events)
 **
-**     Component   :  A0 [ADC]
+**     Component   :  Main_Control [TimerInt]
 **     Description :
-**         This event is called after the measurement (which consists
-**         of <1 or more conversions>) is/are finished.
-**         The event is available only when the <Interrupt
-**         service/event> property is enabled.
+**         When a timer interrupt occurs this event is called (only
+**         when the component is enabled - <Enable> and the events are
+**         enabled - <EnableEvent>). This event is enabled only if a
+**         <interrupt service/event> is enabled.
 **     Parameters  : None
 **     Returns     : Nothing
 ** ===================================================================
 */
-void A0_OnEnd(void)
+void Main_Control_OnInterrupt(void)
 {
-  /* Write your code here ... */
-}
+	static double desiredSpeed = 36.0; // inches per second
+	static double speedCommand = 5000; //us
+	const double Kp = 10.0;
+	//Calculate the average speed of the wheels
+	double avgSpeed = 0;
+	avgSpeed = speed/count; // inches per second
+	count = 0;
+	speed = 0;
 
-/*
-** ===================================================================
-**     Event       :  A0_OnCalibrationEnd (module Events)
-**
-**     Component   :  A0 [ADC]
-**     Description :
-**         This event is called when the calibration has been finished.
-**         User should check if the calibration pass or fail by
-**         Calibration status method./nThis event is enabled only if
-**         the <Interrupt service/event> property is enabled.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-void A0_OnCalibrationEnd(void)
-{
-  /* Write your code here ... */
+	//From Hall Effect Sensor, update the motor
+	double Error = Kp * (avgSpeed - desiredSpeed);
+	speedCommand += Error; //Larger command is a slower speed
+
+	Motor_Control_SetDutyUS(speedCommand);
+
+	//From line camera data, update the servo.
+
 }
 
 /* END Events */
